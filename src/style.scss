@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "extra";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: rgb(207, 207, 207);
+  color: rgb(37, 37, 37);
+  min-height: 100vh;
+  font-family: 'poppins';
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+
+nav {
+  display: flex;
+  font-size: 18px;
+  gap: 20px;
+
+  a {
+    text-decoration: none;
+    color: rgb(85, 97, 117);
+  }
+
+  .active {
+    text-shadow: 0 0 10px rgb(144, 144, 144);
+  }
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
+
+    span {
+      color: rgb(152, 60, 136);
+      margin-left: 5px;
+    }
+  }
+}
+
+
+//List page
+
+.list-page {
+  padding: 20px;
+}
+
+.job-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+}
+
+.card {
+  background: rgb(115, 129, 155);
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+
+
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+
+
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 40px;
+      margin-bottom: 20px;
+
+      .letter {
+        background: #9aafae;
+        width: 60px;
+        height: 60px;
+        text-transform: uppercase;
+        display: grid;
+        place-items: center;
+        border-radius: 10px;
+        font-size: 34px;
+        text-shadow: 0 0 12px rgb(255, 255, 255);
+      }
+
+      .info {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+
+    .field {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .status {
+      display: flex;
+
+      p {
+        padding: 6px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+//Add Job
+.add-page {
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+}
+
+.add-sec {
+  width: 70vw;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 25px;
+  border-radius: 5px;
+  border: solid 1px gray;
+  box-shadow: 0 0px 10px gray;
+
+  form {
+    margin-top: 20px;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    div input,
+    div select {
+      padding: 10px 15px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      font-family: "Poppins";
+      background-color: rgb(175, 175, 175);
+    }
+
+
+    div button {
+      padding: 10px 15px;
+      margin-top: 30px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      font-family: "Poppins";
+      background-color: rgb(93, 93, 93);
+      color: #fff;
+    }
+
+  }
+}
+
+.filter-sec{
+  @extend .add-sec;
+  margin: 20px auto 80px;
+   border: solid 1px gray;
+  div:last-child button{
+   background-color: #fff;
+   color: #0b0b0b;
+  }
+}
